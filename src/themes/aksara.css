@@ -1,0 +1,72 @@
+/**
+ * @abydahana/iconpicker Aksara UI Theme
+ */
+
+.iconpicker-theme-aksara {
+  background-color: var(--aksara-bg-surface, #ffffff);
+  color: var(--aksara-text-body, #172033);
+  border: var(--aksara-border-width, 1px) solid var(--aksara-border, #d7deea);
+  border-radius: var(--aksara-radius-md, 0.75rem);
+  box-shadow: var(--aksara-shadow-md, 0 12px 30px rgba(15, 23, 42, 0.1));
+}
+
+.iconpicker-theme-aksara .iconpicker-search-input {
+  background-color: var(--aksara-bg-body, #fbfcff);
+  color: var(--aksara-text-body, #172033);
+  border: 1px solid var(--aksara-border, #d7deea);
+  border-radius: var(--aksara-radius-sm, 0.5rem);
+}
+
+.iconpicker-theme-aksara .iconpicker-search-input:focus {
+  border-color: var(--aksara-primary, #2563eb);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.iconpicker-theme-aksara .iconpicker-tab {
+  color: var(--aksara-text-body-secondary, #64748b);
+  border-radius: var(--aksara-radius-xs, 0.25rem);
+}
+
+.iconpicker-theme-aksara .iconpicker-tab:hover {
+  background-color: var(--aksara-surface-hover, #f4f7fb);
+  color: var(--aksara-text-body, #172033);
+}
+
+.iconpicker-theme-aksara .iconpicker-tab.is-active {
+  background-color: var(--aksara-primary, #2563eb);
+  color: #ffffff;
+}
+
+.iconpicker-theme-aksara .iconpicker-tab.is-active .iconpicker-tab-count {
+  opacity: 0.85;
+}
+
+.iconpicker-theme-aksara .iconpicker-item {
+  color: var(--aksara-text-body, #172033);
+}
+
+.iconpicker-theme-aksara .iconpicker-item:hover {
+  background-color: var(--aksara-surface-hover, #f4f7fb);
+  border-color: var(--aksara-border, #d7deea);
+}
+
+.iconpicker-theme-aksara .iconpicker-item.is-selected {
+  background-color: var(--aksara-primary, #2563eb);
+  color: #ffffff;
+  border-color: var(--aksara-primary, #2563eb);
+}
+
+.iconpicker-theme-aksara .iconpicker-footer {
+  border-top-color: var(--aksara-border-subtle, #e6ebf3);
+  background-color: var(--aksara-bg-body-secondary, #f4f7fb);
+  border-bottom-left-radius: var(--aksara-radius-md, 0.75rem);
+  border-bottom-right-radius: var(--aksara-radius-md, 0.75rem);
+}
+
+.iconpicker-theme-aksara .iconpicker-btn-clear {
+  color: var(--aksara-danger, #ef4444);
+}
+
+.iconpicker-theme-aksara .iconpicker-btn-clear:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}

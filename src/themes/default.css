@@ -1,0 +1,70 @@
+/**
+ * @abydahana/iconpicker Default Neutral Theme
+ */
+
+.iconpicker-theme-default {
+  background-color: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.iconpicker-theme-default .iconpicker-search-input {
+  background-color: #f8fafc;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.iconpicker-theme-default .iconpicker-search-input:focus {
+  background-color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.iconpicker-theme-default .iconpicker-tab {
+  color: #64748b;
+  border-radius: 4px;
+}
+
+.iconpicker-theme-default .iconpicker-tab:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.iconpicker-theme-default .iconpicker-tab.is-active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.iconpicker-theme-default .iconpicker-item {
+  color: #334155;
+  border-radius: 6px;
+}
+
+.iconpicker-theme-default .iconpicker-item:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.iconpicker-theme-default .iconpicker-item.is-selected {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+.iconpicker-theme-default .iconpicker-footer {
+  border-top-color: #f1f5f9;
+  background-color: #f8fafc;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.iconpicker-theme-default .iconpicker-btn-clear {
+  color: #ef4444;
+}
+
+.iconpicker-theme-default .iconpicker-btn-clear:hover {
+  background-color: #fee2e2;
+}

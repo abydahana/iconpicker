@@ -1,0 +1,110 @@
+/**
+ * @abydahana/iconpicker Tailwind UI Theme
+ */
+
+.iconpicker-theme-tailwind {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.iconpicker-theme-tailwind .iconpicker-search-input {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.iconpicker-theme-tailwind .iconpicker-search-input:focus {
+  background-color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.iconpicker-theme-tailwind .iconpicker-tab {
+  color: #64748b;
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+.iconpicker-theme-tailwind .iconpicker-tab:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.iconpicker-theme-tailwind .iconpicker-tab.is-active {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+.iconpicker-theme-tailwind .iconpicker-item {
+  color: #334155;
+  border-radius: 0.5rem;
+}
+
+.iconpicker-theme-tailwind .iconpicker-item:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.iconpicker-theme-tailwind .iconpicker-item.is-selected {
+  background-color: #6366f1;
+  color: #ffffff;
+  border-color: #6366f1;
+}
+
+.iconpicker-theme-tailwind .iconpicker-footer {
+  border-top-color: #f1f5f9;
+  background-color: #f8fafc;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.iconpicker-theme-tailwind .iconpicker-btn-clear {
+  color: #ef4444;
+}
+
+.iconpicker-theme-tailwind .iconpicker-btn-clear:hover {
+  background-color: #fee2e2;
+}
+
+/* Dark mode auto support for Tailwind theme */
+@media (prefers-color-scheme: dark) {
+  .iconpicker-theme-tailwind {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: #1e293b;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-search-input {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-color: #334155;
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-tab {
+    color: #94a3b8;
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-tab:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-item {
+    color: #cbd5e1;
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-item:hover {
+    background-color: #1e293b;
+    border-color: #334155;
+  }
+
+  .iconpicker-theme-tailwind .iconpicker-footer {
+    border-top-color: #1e293b;
+    background-color: #0b1120;
+  }
+}
