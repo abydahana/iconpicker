@@ -139,8 +139,8 @@ export class IconPicker {
       if (this.dom.root.contains(clicked)) return;
       if (this.target.contains(clicked)) return;
       if (inputGroup && inputGroup.contains(clicked)) return;
-      const card = this.target.closest('.menu-item-card');
-      const barIcon = card?.querySelector('.menu-item-icon-preview');
+      const card = this.target.closest(".menu-item-card");
+      const barIcon = card?.querySelector(".menu-item-icon-preview");
       if (barIcon && barIcon.contains(clicked)) return;
       this.close();
     };
@@ -168,14 +168,14 @@ export class IconPicker {
       if (!this.isOpen) this.open();
     });
 
-    const card = this.target.closest('.menu-item-card');
+    const card = this.target.closest(".menu-item-card");
     if (card) {
-      const barIcon = card.querySelector<HTMLElement>('.menu-item-icon-preview');
+      const barIcon = card.querySelector<HTMLElement>(".menu-item-icon-preview");
       if (barIcon) {
-        barIcon.style.cursor = 'pointer';
-        barIcon.setAttribute('role', 'button');
-        barIcon.title = 'Click to change icon';
-        barIcon.addEventListener('click', (e) => {
+        barIcon.style.cursor = "pointer";
+        barIcon.setAttribute("role", "button");
+        barIcon.title = "Click to change icon";
+        barIcon.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
           this.toggle();

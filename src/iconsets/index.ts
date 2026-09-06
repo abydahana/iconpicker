@@ -1,19 +1,19 @@
-export * from './mdi';
-export * from './fontawesome';
-export * from './bootstrap';
-export * from './tabler';
-export * from './remix';
-export * from './boxicons';
-export * from './lucide';
+export * from "./mdi";
+export * from "./fontawesome";
+export * from "./bootstrap";
+export * from "./tabler";
+export * from "./remix";
+export * from "./boxicons";
+export * from "./lucide";
 
-import { mdiIconSet } from './mdi';
-import { fontawesomeIconSet } from './fontawesome';
-import { bootstrapIconSet } from './bootstrap';
-import { tablerIconSet } from './tabler';
-import { remixIconSet } from './remix';
-import { boxiconsIconSet } from './boxicons';
-import { lucideIconSet } from './lucide';
-import type { IconSetDefinition } from '../types';
+import { mdiIconSet } from "./mdi";
+import { fontawesomeIconSet } from "./fontawesome";
+import { bootstrapIconSet } from "./bootstrap";
+import { tablerIconSet } from "./tabler";
+import { remixIconSet } from "./remix";
+import { boxiconsIconSet } from "./boxicons";
+import { lucideIconSet } from "./lucide";
+import type { IconSetDefinition } from "../types";
 
 export const builtInIconSets: Record<string, IconSetDefinition> = {
   mdi: mdiIconSet,
@@ -27,5 +27,5 @@ export const builtInIconSets: Record<string, IconSetDefinition> = {
   ri: remixIconSet,
   boxicons: boxiconsIconSet,
   bx: boxiconsIconSet,
-  lucide: lucideIconSet,
+  lucide: lucideIconSet
 };

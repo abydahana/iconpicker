@@ -88,13 +88,7 @@ import { IconPicker } from "@abydahana/iconpicker";
   <span class="input-group-text">
     <i class="bi bi-star"></i>
   </span>
-  <input
-    type="text"
-    id="bs-icon-input"
-    class="form-control"
-    placeholder="Select icon"
-    value="bi bi-star"
-  />
+  <input type="text" id="bs-icon-input" class="form-control" placeholder="Select icon" value="bi bi-star" />
 </div>
 ```
 
@@ -120,7 +114,9 @@ new IconPicker("#bs-icon-input", {
 ```
 
 ```html
-<div class="relative flex items-center rounded-lg shadow-sm border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden max-w-sm">
+<div
+  class="relative flex items-center rounded-lg shadow-sm border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 overflow-hidden max-w-sm"
+>
   <div class="flex items-center justify-center pl-3 text-slate-500">
     <i class="lucide lucide-heart text-base"></i>
   </div>
@@ -152,26 +148,26 @@ new IconPicker("#tailwind-icon-input", {
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Icon Picker Demo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@abydahana/iconpicker/dist/iconpicker.css" />
-</head>
-<body>
-  <div style="margin: 40px;">
-    <input type="text" id="plain-icon" placeholder="Click to choose icon..." />
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Icon Picker Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@abydahana/iconpicker/dist/iconpicker.css" />
+  </head>
+  <body>
+    <div style="margin: 40px;">
+      <input type="text" id="plain-icon" placeholder="Click to choose icon..." />
+    </div>
 
-  <script type="module">
-    import { IconPicker } from "https://cdn.jsdelivr.net/npm/@abydahana/iconpicker/dist/index.js";
+    <script type="module">
+      import { IconPicker } from "https://cdn.jsdelivr.net/npm/@abydahana/iconpicker/dist/index.js";
 
-    new IconPicker("#plain-icon", {
-      theme: "default",
-      iconSets: ["mdi", "bi", "boxicons"],
-      defaultSet: "mdi"
-    });
-  </script>
-</body>
+      new IconPicker("#plain-icon", {
+        theme: "default",
+        iconSets: ["mdi", "bi", "boxicons"],
+        defaultSet: "mdi"
+      });
+    </script>
+  </body>
 </html>
 ```
 
@@ -179,15 +175,15 @@ new IconPicker("#tailwind-icon-input", {
 
 ## Supported Icon Sets
 
-| Identifier | Name | Total Icons | Class Prefix / Output Format |
-|---|---|---|---|
-| `mdi` | Material Design Icons | 7,448 | `mdi mdi-{name}` |
-| `fa` | FontAwesome 6 Free | 1,895 | `fa-solid fa-{name}` / `fa-brands fa-{name}` |
-| `bi` | Bootstrap Icons | 2,050 | `bi bi-{name}` |
-| `tabler` | Tabler Icons | 4,879 | `ti ti-{name}` |
-| `remix` | Remix Icon | 2,892 | `ri-{name}` |
-| `boxicons` | Boxicons | 814 | `bx bx-{name}` |
-| `lucide` | Lucide Icons | 1,807 | `lucide lucide-{name}` |
+| Identifier | Name                  | Total Icons | Class Prefix / Output Format                 |
+| ---------- | --------------------- | ----------- | -------------------------------------------- |
+| `mdi`      | Material Design Icons | 7,448       | `mdi mdi-{name}`                             |
+| `fa`       | FontAwesome 6 Free    | 1,895       | `fa-solid fa-{name}` / `fa-brands fa-{name}` |
+| `bi`       | Bootstrap Icons       | 2,050       | `bi bi-{name}`                               |
+| `tabler`   | Tabler Icons          | 4,879       | `ti ti-{name}`                               |
+| `remix`    | Remix Icon            | 2,892       | `ri-{name}`                                  |
+| `boxicons` | Boxicons              | 814         | `bx bx-{name}`                               |
+| `lucide`   | Lucide Icons          | 1,807       | `lucide lucide-{name}`                       |
 
 When passing a single set (e.g. `iconSets: ["mdi"]`), the tab bar automatically hides.
 
@@ -217,25 +213,25 @@ interface IconPickerOptions {
 }
 ```
 
-| Parameter | Type | Default | Description |
-|---|---|---|---|
-| `theme` | `string` | `'default'` | Theme preset (`'aksara'`, `'bootstrap'`, `'tailwind'`, `'default'`). |
-| `placement` | `string` | `'bottom-start'` | Popover position relative to target element. |
-| `iconSets` | `array` | `['mdi', 'fa', ...]` | Array of icon set IDs or custom definitions. |
-| `defaultSet` | `string` | `'mdi'` | Initial active tab. |
-| `searchPlaceholder` | `string` | `'Search icons...'` | Search input placeholder. |
-| `value` | `string` | `''` | Initial selected class name. |
-| `container` | `HTMLElement \| string` | `document.body` | Element where popover is appended. |
-| `showTabs` | `boolean` | `true` | Show/hide icon set tabs (auto-hidden when <= 1 set). |
-| `showFooter` | `boolean` | `true` | Show/hide selected icon preview footer. |
-| `closeOnSelect` | `boolean` | `true` | Close popover when an icon is picked. |
-| `emptyText` | `string` | `'No icons found...'` | Message when no search results match. |
-| `itemsPerPage` | `number` | `120` | Virtualized chunk size when scrolling. |
-| `loadFonts` | `boolean` | `true` | Auto-inject CDN stylesheets when switching tabs. |
-| `fontUrls` | `object` | `{}` | Custom CDN font URLs per set. |
-| `onSelect` | `function` | `undefined` | Callback: `(icon: IconItem) => void`. |
-| `onOpen` | `function` | `undefined` | Callback when popover opens. |
-| `onClose` | `function` | `undefined` | Callback when popover closes. |
+| Parameter           | Type                    | Default               | Description                                                          |
+| ------------------- | ----------------------- | --------------------- | -------------------------------------------------------------------- |
+| `theme`             | `string`                | `'default'`           | Theme preset (`'aksara'`, `'bootstrap'`, `'tailwind'`, `'default'`). |
+| `placement`         | `string`                | `'bottom-start'`      | Popover position relative to target element.                         |
+| `iconSets`          | `array`                 | `['mdi', 'fa', ...]`  | Array of icon set IDs or custom definitions.                         |
+| `defaultSet`        | `string`                | `'mdi'`               | Initial active tab.                                                  |
+| `searchPlaceholder` | `string`                | `'Search icons...'`   | Search input placeholder.                                            |
+| `value`             | `string`                | `''`                  | Initial selected class name.                                         |
+| `container`         | `HTMLElement \| string` | `document.body`       | Element where popover is appended.                                   |
+| `showTabs`          | `boolean`               | `true`                | Show/hide icon set tabs (auto-hidden when <= 1 set).                 |
+| `showFooter`        | `boolean`               | `true`                | Show/hide selected icon preview footer.                              |
+| `closeOnSelect`     | `boolean`               | `true`                | Close popover when an icon is picked.                                |
+| `emptyText`         | `string`                | `'No icons found...'` | Message when no search results match.                                |
+| `itemsPerPage`      | `number`                | `120`                 | Virtualized chunk size when scrolling.                               |
+| `loadFonts`         | `boolean`               | `true`                | Auto-inject CDN stylesheets when switching tabs.                     |
+| `fontUrls`          | `object`                | `{}`                  | Custom CDN font URLs per set.                                        |
+| `onSelect`          | `function`              | `undefined`           | Callback: `(icon: IconItem) => void`.                                |
+| `onOpen`            | `function`              | `undefined`           | Callback when popover opens.                                         |
+| `onClose`           | `function`              | `undefined`           | Callback when popover closes.                                        |
 
 ---
 
@@ -271,6 +267,33 @@ new IconPicker("#my-input", {
   iconSets: [customSet, "mdi"],
   defaultSet: "custom"
 });
+```
+
+---
+
+## Development
+
+```bash
+# Format, lint, and build all at once
+npm run all
+
+# Build TypeScript and CSS bundles
+npm run build
+
+# Type check
+npm run check
+
+# Lint source files
+npm run lint
+
+# Automatically fix linting issues
+npm run lint:fix
+
+# Format code with Prettier and ESLint
+npm run format
+
+# Verify formatting and linting
+npm run format:check
 ```
 
 ---

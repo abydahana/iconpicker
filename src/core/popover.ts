@@ -46,14 +46,12 @@ export class PopoverPositioner {
   }
 
   public updatePosition(): void {
-    let ref = this.reference;
-    let refRect = ref.getBoundingClientRect();
+    let refRect = this.reference.getBoundingClientRect();
     if (refRect.width === 0 && refRect.height === 0) {
-      const card = ref.closest('.menu-item-card');
+      const card = this.reference.closest(".menu-item-card");
       if (card) {
-        const barIcon = card.querySelector<HTMLElement>('.menu-item-icon-preview');
+        const barIcon = card.querySelector<HTMLElement>(".menu-item-icon-preview");
         if (barIcon && barIcon.getBoundingClientRect().width > 0) {
-          ref = barIcon;
           refRect = barIcon.getBoundingClientRect();
         }
       }
@@ -64,23 +62,19 @@ export class PopoverPositioner {
     const padding = 8;
     const offset = this.options.offset;
 
-    let placement = this.options.placement;
+    const placement = this.options.placement;
 
     // Determine vertical direction if auto
     const spaceBelow = viewportHeight - refRect.bottom - offset - padding;
     const spaceAbove = refRect.top - offset - padding;
 
-    let isTop = false;
+    let isTop: boolean;
     if (placement.startsWith("top")) {
-      isTop = true;
-      if (spaceAbove < popRect.height && spaceBelow > spaceAbove) {
-        isTop = false; // flip to bottom if top has less space
-      }
+      // flip to bottom if top has less space
+      isTop = !(spaceAbove < popRect.height && spaceBelow > spaceAbove);
     } else if (placement.startsWith("bottom")) {
-      isTop = false;
-      if (spaceBelow < popRect.height && spaceAbove > spaceBelow) {
-        isTop = true; // flip to top if bottom has less space
-      }
+      // flip to top if bottom has less space
+      isTop = spaceBelow < popRect.height && spaceAbove > spaceBelow;
     } else {
       // auto
       isTop = spaceBelow < 280 && spaceAbove > spaceBelow;
