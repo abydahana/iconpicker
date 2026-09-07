@@ -28,6 +28,7 @@ export class IconPicker {
   private outsideClickListener: (e: MouseEvent) => void;
   private keydownListener: (e: KeyboardEvent) => void;
   private targetClickListener: (e: MouseEvent) => void;
+  private justFocused = false;
 
   constructor(target: HTMLElement | string, options: IconPickerOptions = {}) {
     const el = typeof target === "string" ? document.querySelector<HTMLElement>(target) : target;
@@ -155,7 +156,15 @@ export class IconPicker {
 
     this.targetClickListener = (e: MouseEvent) => {
       e.stopPropagation();
-      this.toggle();
+      if (this.justFocused) {
+        this.justFocused = false;
+        return;
+      }
+      if (this.target instanceof HTMLInputElement) {
+        if (!this.isOpen) this.open();
+      } else {
+        this.toggle();
+      }
     };
 
     this.bindEvents(inputGroup);
@@ -165,7 +174,13 @@ export class IconPicker {
   private bindEvents(inputGroup: Element | null): void {
     this.target.addEventListener("click", this.targetClickListener);
     this.target.addEventListener("focus", () => {
-      if (!this.isOpen) this.open();
+      if (!this.isOpen) {
+        this.justFocused = true;
+        this.open();
+        setTimeout(() => {
+          this.justFocused = false;
+        }, 250);
+      }
     });
 
     const card = this.target.closest(".menu-item-card");

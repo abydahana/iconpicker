@@ -1,6 +1,6 @@
 {
   "name": "@abydahana/iconpicker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Universal, framework-agnostic floating popover icon picker with multi-pack support",
   "author": "Aby Dahana",
   "license": "MIT",
