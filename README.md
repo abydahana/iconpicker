@@ -159,7 +159,7 @@ new IconPicker("#tailwind-icon-input", {
     </div>
 
     <script type="module">
-      import { IconPicker } from "https://cdn.jsdelivr.net/npm/@abydahana/iconpicker/dist/index.js";
+      import { IconPicker } from "https://esm.sh/@abydahana/iconpicker";
 
       new IconPicker("#plain-icon", {
         theme: "default",
