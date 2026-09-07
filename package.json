@@ -34,10 +34,10 @@
   "scripts": {
     "build": "node --import tsx build.ts",
     "check": "tsc --noEmit",
-    "lint": "eslint src build.ts scripts eslint.config.js",
-    "lint:fix": "eslint src build.ts scripts eslint.config.js --fix",
-    "format": "prettier --write . && eslint src build.ts scripts eslint.config.js --fix",
-    "format:check": "prettier --check . && eslint src build.ts scripts eslint.config.js",
+    "lint": "eslint src build.ts scripts eslint.config.ts",
+    "lint:fix": "eslint src build.ts scripts eslint.config.ts --fix",
+    "format": "prettier --write . && eslint src build.ts scripts eslint.config.ts --fix",
+    "format:check": "prettier --check . && eslint src build.ts scripts eslint.config.ts",
     "all": "npm run format && npm run lint && npm run build",
     "prepublishOnly": "npm run all"
   },
@@ -61,6 +61,7 @@
     "@types/node": "^26.4.1",
     "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
+    "jiti": "^2.7.0",
     "prettier": "^3.9.6",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
