@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -e
+
+echo "🔍 Running pre-commit checks..."
+
+# Run TypeScript type check
+npm run check
+
+# Check formatting and linting
+npm run format:check
+
+# Run test suite
+npm run test
+
+echo "✅ Pre-commit quality checks passed!"
